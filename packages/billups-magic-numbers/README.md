@@ -1,0 +1,3 @@
+# Magic numbers
+
+Reusable magic

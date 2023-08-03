@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools", "setuptools-scm"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.setuptools.packages.find]
 where = ["."]
@@ -8,8 +8,67 @@ include = ["billups"]
 namespaces = true
 
 [project]
-name = "billups-dateutil"
-version = "1.0.3"
+name = "billups-date-utils"
 description = "Date Utilities for Billups"
-license = { text = "Snake Corp Software License Agreement" }
+license = { text = "Apache license 2" }
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["billups", "dates"]
+authors = [
+  { name = "Keni", email = "kehinde.adewusi@gmail.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.7",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "pydeequ==1.0.1",
+]
+dynamic = ["version"]
 
+[project.urls]
+Documentation = "https://github.com/kehindeadewusi/rps#readme"
+Issues = "https://github.com/kehindeadewusi/rps/issues"
+Source = "https://github.com/kehindeadewusi/rps"
+
+
+[tool.hatch.version]
+path = "billups/dates/__init__.py"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.envs.default]
+dependencies = [
+  "pytest==7.2.0",
+  "pytest-cov==4.0.0",
+  "pytest-mock==3.10.0",
+  "requests-mock==1.10.0",
+]
+[tool.hatch.envs.default.scripts]
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=billups/dates --cov=tests"
+no-cov = "cov --no-cov"
+
+[[tool.hatch.envs.test.matrix]]
+python = ["37", "38", "39", "310", "311"]
+
+[tool.coverage.run]
+branch = true
+parallel = true
+omit = [
+  "",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
