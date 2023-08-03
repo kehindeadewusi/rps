@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["billups"]
+namespaces = true
+
+[project]
+name = "billups-dateutil"
+version = "1.0.3"
+description = "Date Utilities for Billups"
+license = { text = "Snake Corp Software License Agreement" }
+
