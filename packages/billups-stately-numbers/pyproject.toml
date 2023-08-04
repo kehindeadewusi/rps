@@ -8,12 +8,12 @@ include = ["billups", "billups.numbers"]
 namespaces = true
 
 [project]
-name = "billups-magic-numbers"
-description = "Magics for Billups"
+name = "billups-stately-numbers"
+description = "Stately for Billups"
 license = { text = "Apache license 2" }
 readme = "README.md"
 requires-python = ">=3.7"
-keywords = ["billups", "magic"]
+keywords = ["billups", "stately"]
 authors = [
   { name = "Keni", email = "kehinde.adewusi@gmail.com" },
 ]
@@ -40,7 +40,7 @@ Source = "https://github.com/kehindeadewusi/rps"
 
 
 [tool.hatch.version]
-path = "billups/numbers/magical/__init__.py"
+path = "billups/numbers/stately/__init__.py"
 
 [tool.hatch.metadata]
 allow-direct-references = true
@@ -53,7 +53,7 @@ dependencies = [
   "requests-mock==1.10.0",
 ]
 [tool.hatch.envs.default.scripts]
-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=billups/numbers/magical --cov=tests"
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=billups/numbers/stately --cov=tests"
 no-cov = "cov --no-cov"
 
 [[tool.hatch.envs.test.matrix]]

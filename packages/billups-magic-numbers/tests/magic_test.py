@@ -1,4 +1,4 @@
-from billups.numbers.magic import secret_number_generator
+from billups.numbers.magical.magic import secret_number_generator
 
 
 def test_magic():
