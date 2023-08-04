@@ -19,6 +19,12 @@ and for the second package
 pip install "billups-magic-numbers @ git+ssh://git@github.com/kehindeadewusi/rps/#subdirectory=packages/billups-magic-numbers"
 ```
 
+and...
+
+```
+pip install "billups-stately-numbers @ git+ssh://git@github.com/kehindeadewusi/rps/#subdirectory=packages/billups-stately-numbers"
+```
+
 ## Testing
 
 You can run the service project to test, after installing:
