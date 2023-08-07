@@ -1,3 +1,6 @@
+from billups.numbers.magical.magic import secret_number_generator
+
+
 def state_num(state: str):
     if not state:
         return -1
@@ -14,3 +17,7 @@ def state_num(state: str):
         return 3
 
     return 100
+
+
+def state_magic():
+    return secret_number_generator()

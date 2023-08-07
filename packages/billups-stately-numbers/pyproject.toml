@@ -29,7 +29,7 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-  "pydeequ==1.0.1",
+  "billups-magic-numbers @ git+ssh://git@github.com/kehindeadewusi/rps/#subdirectory=packages/billups-magic-numbers"
 ]
 dynamic = ["version"]
 
